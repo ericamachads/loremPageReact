@@ -1,0 +1,23 @@
+.footer{
+  background: #000;
+  color:#fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:$gap;
+  padding: $gap/2;
+  margin-top: $gap;
+  .socialMedias a{
+    color: $color5;
+    &:hover{
+      color:$color7;
+    }
+  }
+  .menuItem:hover{
+    color:$color5;
+  }
+  p{
+    color: rgba($color: #fff, $alpha: 0.5);
+  }
+}

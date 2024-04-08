@@ -1,0 +1,30 @@
+// typografy
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@500&family=Roboto&display=swap');
+
+a,p,input{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+button,h2,span{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+h1,q{
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
+// generical styles
+a,button{
+  cursor: pointer;
+  padding: $gap/2 $gap;
+}
+input{
+  padding: $gap/2;
+}

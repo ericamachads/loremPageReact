@@ -1,0 +1,35 @@
+.menu{
+  display: flex;
+  padding:$gap;
+  justify-content: space-between;
+  align-items: center;
+  div{
+    display: flex;
+    gap: $gap/2;
+  }
+  .logo{
+    padding: 0;
+    color:$color6;
+  }
+  .menuItem{
+    color: rgba($color: #000, $alpha: 0.5);
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      width: 50%;
+      left: 25%;
+      bottom: 20%;
+      height: 1px;
+      background: $color3;
+      transform: scaleX(0);
+      transition: 0.3s ease-in-out;
+    }
+    &:hover{
+      color: #000;
+      &::after{
+        transform: scaleX(1);
+      }
+    }
+  }
+}

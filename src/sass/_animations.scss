@@ -1,0 +1,14 @@
+@mixin animationTranslateX ($opacity,$translateX){
+  opacity: $opacity;
+  transform: translateX($translateX);
+  transition: 1s;
+}
+.animationLeft{
+  @include animationTranslateX(0,-2rem);
+}
+.animationRight{
+  @include animationTranslateX(0,2rem);
+}
+.showAnimation{
+  @include animationTranslateX(1,0);
+}

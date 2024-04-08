@@ -1,0 +1,27 @@
+@media (max-width:800px) {
+  .menu{
+    flex-direction: column;
+  }
+  .sectionPrimary{
+    .content{
+      grid-template-columns: 1fr;
+    }
+  }
+  .sectionOportunities{
+    .oportunities{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .sectionProducts{
+    .products{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+@media (max-width:580px) {
+  .sectionProducts{
+    .products{
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+// mixins
+@mixin backgroundImage($url){
+  background-image: url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin buttonStyles ($background,$textColor,$borderColor,$sizeOnHover){
+  background: $background;
+  color: $textColor;
+  border: 1px solid $borderColor;
+  border-radius: 2rem;
+  transition: 0.3s ease-in-out;
+  &:hover,&:active{
+    transform: scale($sizeOnHover);
+  }
+}
+
+// utilities classes
+.container{
+  max-width: 1200px;
+  padding: $gap;
+  margin: 0 auto;
+}
+.buttonPrimary{
+  @include buttonStyles(linear-gradient($color8,$color7), #fff, transparent, 1.05)
+}
+.buttonSecondary{
+  @include buttonStyles( transparent, $color6, $color6,1);
+  box-shadow: inset 0 0 0 0 $color6;
+  &:hover{
+    box-shadow: inset 0 -10rem 0 0 $color6;
+    color:#fff;
+  }
+}
+.title {
+  margin-bottom: $gap;
+  position: relative;
+  &::after{
+    position: absolute;
+    content: '';
+    width: 3rem;
+    height: 2px;
+    left: 0;
+    bottom: -($gap/3);
+    background: $color3;
+  }
+}

@@ -1,0 +1,105 @@
+.sectionPrimary{
+  @include backgroundImage("../assets/background.jpg");
+  .content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: $gap;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    h1{
+      color: #fff;
+      font-size: 3rem;
+      text-shadow: 0px 0px 2px $color9;
+    }
+    p{
+      color:$color2;
+      font-size: 1.5rem;
+      text-shadow: 0px 0px 2px $color9;
+    }
+    .simpleForm{
+      display: flex;
+      flex-direction: column;
+      gap: $gap/2;
+      padding: $gap;
+      border-radius: 2rem;
+      background: rgba($color: $color2, $alpha: 0.7);
+      h2{
+        color:$color7;
+        font-size: 1.5rem;
+      }
+      input{
+        color:$color8;
+        border-radius: 1rem;
+        border: 1px solid $color8;
+        &:hover,&:active{
+          box-shadow: 0px 0px 3px $color6;
+        }
+      }
+    }
+  }
+}
+.sectionOportunities{
+  .oportunities{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: $gap;
+    text-align: center;
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      background: $color4;
+      color:$color8;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    button{
+      margin: 0 auto;
+    }
+    h2{
+      padding: $gap/2;
+    }
+  }
+}
+.sectionDepoiment{
+  background: $color9;
+  .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap;
+    align-items: center;
+    .image{
+      @include backgroundImage("../assets/person.jpg");
+      min-height: 60vh;
+    }
+    q{
+      color:$color2;
+    }
+  }
+}
+.sectionProducts{
+  .products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: $gap;
+    .product{
+      background: $color1;
+      color:$color7;
+      padding: $gap;
+      border-radius: 2rem;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      &:hover{
+        background: $color7;
+        color:$color1;
+        transform: scale(1.05);
+      }
+      h2{
+        padding: $gap/2;
+      }
+    }
+  }
+}
